@@ -1,5 +1,5 @@
-#include "cv.h" 
-#include "highgui.h" 
+#include <opencv/cv.h> 
+#include <opencv/highgui.h> 
 #include <stdio.h>
 #include <gtk-2.0/gtk/gtk.h>
 #include <glib-2.0/glib.h>
