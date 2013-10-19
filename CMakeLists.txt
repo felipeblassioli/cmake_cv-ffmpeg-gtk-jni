@@ -3,6 +3,16 @@ project( CameraInput )
 add_definitions(-D__STDC_CONSTANT_MACROS)
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake_modules/")
 
+#Static start
+#set_target_properties(icarus PROPERTIES LINK_SEARCH_START_STATIC 1)
+#set_target_properties(icarus PROPERTIES LINK_SEARCH_END_STATIC 1)
+#set(CMAKE_FIND_LIBRARY_SUFFIXES ".a")
+#Static Libs
+#...
+#Set Linker flags
+#set(CMAKE_EXE_LINKER_FLAGS "-static-libgcc -static-libstdc++")
+
+include_directories("C:/dev/msinttypes-r26")
 find_package( FFMPEG REQUIRED )
 if (FFMPEG_FOUND)
     message (STATUS "-------- FFMPEG_FOUND ----------" )
@@ -13,9 +23,12 @@ if (FFMPEG_FOUND)
     include_directories (${FFMPEG_INCLUDE_DIR})
 endif(FFMPEG_FOUND)
 
-find_package( OpenCV REQUIRED )
+set(OpenCV_DIR "C:/dev/opencv/build")
+find_package( OpenCV REQUIRED core highgui)
 if (OpenCV_FOUND)
+    message (STATUS "-------- OpenCV_FOUND ----------" )
     message (STATUS "OpenCV_LIBS=${OpenCV_LIBS}")
+	message (STATUS "-------- OpenCV_FOUND ----------" )
 endif()
 if (OPENCV2_FOUND)
     message (STATUS "-------- OPENCV2_FOUND ----------" )

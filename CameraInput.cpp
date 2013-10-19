@@ -1,10 +1,9 @@
 #include <opencv/cv.h> 
 #include <opencv/highgui.h> 
 #include <stdio.h>
-#include <gtk-2.0/gtk/gtk.h>
-#include <glib-2.0/glib.h>
-
-#include <libavcodec/avcodec.h>
+//#include <gtk-2.0/gtk/gtk.h>
+//#include <glib-2.0/glib.h>
+//#include <libavcodec/avcodec.h>
 
  // A Simple Camera Capture Framework 
  int main() {
